@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class NumberGuessingGame : MonoBehaviour
 {
-    private int guess = 5;
-    private int minValue = 1;
-    private int maxValue = 10;
+    [SerializeField] private int max;
+    [SerializeField] private int min;
+    [SerializeField] private TextMeshProUGUI guessText;
+
+    private int guess;
 
     // Start is called before the first frame update
     void Start()
@@ -14,41 +17,27 @@ public class NumberGuessingGame : MonoBehaviour
         StartGame();
 
     }
+        void StartGame()
+        {
+            NextGuess();
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.UpArrow))
+        public void OnPressHigher()
         {
-            minValue = guess;
-            guess = (maxValue + minValue) /2;
-            Debug.Log("Is your number higher or lower than: " + guess + "?");
+            min = guess + 1;
+            NextGuess();
         }
-        //Once you go up, down will subtract a number once and repeat
-        //Same goes for down
-        if(Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            maxValue = guess;
-            guess = (maxValue + minValue) /2;
-            Debug.Log("Is your number higher or lower than: " + guess + "?");
-        }
-        if(Input.GetKeyDown(KeyCode.Return))
-        {
-            Debug.Log("Weow! The number was correct!");
-            Debug.Log("");
-            StartGame();
-        }
-    }
 
-    void StartGame()
-    {
-        guess = 5;
-        minValue = 1;
-        maxValue = 10;
-        Debug.Log("Welcome to our Number Guessing game!");
-        Debug.Log("The range of numbers is between " + minValue + " and "  + maxValue);
-        Debug.Log("Use the up and down arrow keys on your keyboard to guess if you think the number is higher or lower than: " + guess + "?");
-        Debug.Log("Good luck and remember to have fun! (To an extent of course.)");
-        maxValue = maxValue + 1;
-    }
+        public void OnPressLower()
+        {
+            max = guess - 1;
+            NextGuess();
+        }
+
+        void NextGuess()
+        {
+            guess = Random.Range(min, max +1);
+            guessText.text = guess.ToString();
+        }
+        
 }
