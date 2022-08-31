@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: THAT'S  IT
+  m_text: '  THAT''S  IT!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 232e9fb1e46a24c4481cc6a2c9104240, type: 2}
   m_sharedMaterial: {fileID: 4477743057024913711, guid: 232e9fb1e46a24c4481cc6a2c9104240, type: 2}
@@ -190,8 +190,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: HIGHER
+  m_text: higher
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 232e9fb1e46a24c4481cc6a2c9104240, type: 2}
   m_sharedMaterial: {fileID: 4477743057024913711, guid: 232e9fb1e46a24c4481cc6a2c9104240, type: 2}
@@ -1041,7 +1041,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '            LOWER'
+  m_text: '            lower'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 232e9fb1e46a24c4481cc6a2c9104240, type: 2}
   m_sharedMaterial: {fileID: 4477743057024913711, guid: 232e9fb1e46a24c4481cc6a2c9104240, type: 2}
@@ -2018,7 +2018,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2043577814
 GameObject:
@@ -2051,7 +2051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max: 20
   min: 1
-  guessText: {fileID: 0}
+  guessText: {fileID: 1864369533}
 --- !u!4 &2043577816
 Transform:
   m_ObjectHideFlags: 0
@@ -2065,5 +2065,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

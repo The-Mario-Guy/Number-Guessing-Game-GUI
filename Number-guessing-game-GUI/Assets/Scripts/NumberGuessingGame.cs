@@ -33,7 +33,7 @@ public class NumberGuessingGame : MonoBehaviour
             NextGuess();
         }
 
-        void NextGuess()
+       public void NextGuess()
         {
             guess = Random.Range(min, max + 1);
             guessText.text = guess.ToString();
